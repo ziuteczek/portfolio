@@ -1,0 +1,17 @@
+---
+type wrapperSizes = {
+  small: string;
+  middle: string;
+  large: string;
+};
+const wrappers: wrapperSizes = {
+  small: "max-w-4xl",
+  middle: "max-w-5xl",
+  large: "max-w-7xl",
+};
+const size: keyof wrapperSizes = Astro.props.size;
+---
+
+<div class:list={["mr-auto ml-auto pr-2 pl-2", wrappers[size]]}>
+  <slot />
+</div>

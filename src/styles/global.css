@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@layer base {
+    :root {
+        --filter-violet-950: invert(19%) sepia(22%) saturate(3944%) hue-rotate(238deg) brightness(83%) contrast(124%);
+    }
+}
