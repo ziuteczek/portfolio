@@ -12,6 +12,6 @@ const wrappers: wrapperSizes = {
 const size: keyof wrapperSizes = Astro.props.size;
 ---
 
-<div class:list={["mr-auto ml-auto pr-2 pl-2", wrappers[size]]}>
+<div class:list={["mr-auto ml-auto pr-2 pl-2", wrappers[size],Astro.props.class]}>
   <slot />
 </div>

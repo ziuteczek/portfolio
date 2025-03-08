@@ -9,14 +9,35 @@ const violet950Filter: string =
   "invert(10%) sepia(98%) saturate(6020%) hue-rotate(266deg) brightness(44%) contrast(99%);";
 ---
 
-<div class={`flex justify-evenly mt-5 lg:mt-10 transition-all duration-700 ${Astro.props.class || ""}`}>
-  <a href="https://github.com/ziuteczek" target="_blank">
-    <Image src={githubIcon} class="h-full object-contain size-20 hover:scale-105 transition-transform duration-150 hover:filter-[var(--filter-violet-950)]" alt="github icon" loading="eager"/>
+<div
+  class={`flex justify-evenly mt-5 lg:mt-10 transition-all duration-700 ${Astro.props.class || ""}`}
+>
+  <a href="https://github.com/ziuteczek" target="_blank" title="github">
+    <Image
+      src={githubIcon}
+      class="h-full object-contain size-20 hover:scale-105 transition-transform duration-150 hover:filter-[var(--filter-violet-950)]"
+      alt="github icon"
+      loading="eager"
+    />
   </a>
-  <a href="mailto:dymnystan@gmail.com" target="_blank">
-    <Image src={emailIcon} class="h-full object-contain size-20 hover:scale-105 transition-transform duration-150 hover:filter-[var(--filter-violet-950)]" alt="mail icon" loading="eager"/>
+  <a href="mailto:dymnystan@gmail.com" target="_blank" title="email">
+    <Image
+      src={emailIcon}
+      class="h-full object-contain size-20 hover:scale-105 transition-transform duration-150 hover:filter-[var(--filter-violet-950)]"
+      alt="mail icon"
+      loading="eager"
+    />
   </a>
-  <a href="https://www.linkedin.com/in/stanis%C5%82aw-dymny-450009282/" target="_blank">
-    <Image src={linkedinIcon} class="h-full object-contain size-20 hover:scale-105 transition-transform duration-150 hover:filter-[var(--filter-violet-950)]" alt="linkedIn icon" loading="eager"/>
+  <a
+    href="https://www.linkedin.com/in/stanis%C5%82aw-dymny-450009282/"
+    target="_blank"
+    title="linked in"
+  >
+    <Image
+      src={linkedinIcon}
+      class="h-full object-contain size-20 hover:scale-105 transition-transform duration-150 hover:filter-[var(--filter-violet-950)]"
+      alt="linkedIn icon"
+      loading="eager"
+    />
   </a>
 </div>
