@@ -3,9 +3,11 @@ import catSelfie from "../assets/cat-selfie.jpg";
 import { Image } from "astro:assets";
 import Wrapper from "../components/Wrapper.astro";
 import SocialIcons from "../components/SocialIcons.astro";
+
+import "../styles/typing-in.css";
 ---
 
-<header>
+<header class="mb-px">
   <Wrapper
     size="large"
     class="lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:pt-14 lg:items-start min-h-svh flex flex-col justify-center items-center"
@@ -14,7 +16,7 @@ import SocialIcons from "../components/SocialIcons.astro";
       <Image
         src={catSelfie}
         alt="Stanisław Dymny with his tuxedo cat Tosia"
-        class="bg-center object-cover aspect-square max-h-96 max-w-96 size-full rounded-full shadow-violet-950"
+        class="bg-center object-cover aspect-square max-h-96 max-w-96 size-full rounded-full"
         loading="eager"
       />
       <SocialIcons class="lg:flex hidden" />
@@ -24,7 +26,11 @@ import SocialIcons from "../components/SocialIcons.astro";
 
       <p class="text-4xl sm:text-5xl">
         My name is
-        <strong class="text-violet-950 text-nowrap text-center"> Stanisław Dymny </strong>
+        <strong
+          class="typing-in  text-violet-950 text-nowrap text-center relative font-[monospace] lg:leading-13 md:leading-13 lg:translate-y-0 md:translate-y-2 -z-10"
+        >
+          Stanisław Dymny
+        </strong>
         <br />
         <span class="text-center"> and I’m web developer</span>
       </p>
@@ -37,3 +43,4 @@ import SocialIcons from "../components/SocialIcons.astro";
     >
   </Wrapper>
 </header>
+<br><br><br><br><br>

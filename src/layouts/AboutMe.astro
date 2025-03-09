@@ -3,17 +3,20 @@ import { Image } from "astro:assets";
 import myPhoto from "../assets/stas-photo.jpg";
 import Wrapper from "../components/Wrapper.astro";
 
-const birthDate = new Date("2007-01-29");
-const today = new Date();
-const stasAge =
+const birthDate: Date = new Date("2007-01-29");
+const today: Date = new Date();
+const stasAge: number =
   today.getFullYear() -
   birthDate.getFullYear() -
   (today < new Date(today.getFullYear(), birthDate.getMonth(), birthDate.getDate()) ? 1 : 0);
 ---
 
-<section id="about-me" class="relative -z-10 overflow-x-clip bg-gradient-to-b from-violet-900 to-violet-950 pt-10 pb-10">
-  <Wrapper size="large" class="flex items-center flex-col sm:flex-row">
-    <div class="lg:flex-5 text-gray-100 sm:mr-5">
+<section
+  id="about-me"
+  class="relative bg-gradient-to-b from-violet-900 to-violet-950 pt-10 pb-10 transition-all duration-700"
+>
+  <Wrapper size="large" class="flex items-center flex-col sm:flex-row z-10">
+    <div class="lg:flex-5 text-gray-100 sm:mr-5 animate-scroll">
       <h2 class="text-6xl mt-5 text-nowrap text-center">About Me</h2>
       <p class="text-xl lg:text-justify mb-5 text-center">
         I'm an {stasAge}-year-old student at the Mechanical and Electronic Technical School in
@@ -27,11 +30,11 @@ const stasAge =
     </div>
     <Image
       src={myPhoto}
-      class="max-h-96 object-contain mb-5 sm:mb-0 "
+      class="max-h-96 object-contain mb-5 sm:mb-0 animate-scroll"
       alt="Stanisław Dymny sitting in black jacketket"
     />
   </Wrapper>
   <div class="absolute bg-white h-10 w-6/12 top-0 -left-10 -skew-x-45"></div>
   <div class="absolute bg-white h-10 w-4/12 bottom-0 -left-10 -z-10 skew-x-45"></div>
 </section>
-<br> 
+
