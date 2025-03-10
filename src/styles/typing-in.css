@@ -1,36 +1,36 @@
 .typing-in::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: white;
-    animation: typingReaveal 5s steps(16) infinite 2s;
-    transform-origin: right;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  animation: typingReveal 5s steps(15, start) 2s forwards;
+  transform-origin: right;
+}
+.typing-in::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0.25rem;
+  background: #000;
+  animation: blink 0.7s infinite, typerIndicatorMoving 5s steps(15, start) 2s forwards;
+}
+@keyframes typingReveal {
+  to {
+    left: 100%;
   }
-  .typing-in::after{
-    position: absolute;
-    content: "";
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: .2rem;
-    background: #000;
-    animation: blink 0.7s infinite,typerIndicatorMoving 5s steps(16) infinite 2s;
+}
+@keyframes typerIndicatorMoving {
+  to {
+    left: 100%;
   }
-  @keyframes typingReaveal {
-    to {
-      left: 100%;
-    }
+}
+@keyframes blink {
+  to {
+    opacity: 0;
   }
-  @keyframes typerIndicatorMoving {
-    to {
-      left: 100%;
-    }
-  }
-  @keyframes blink {
-    to {
-      opacity: 0;
-    }
-  }
+}
