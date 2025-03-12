@@ -5,8 +5,8 @@ const headerEl: Element | null = document.querySelector("header");
 const addClassOnScroll: string = "on-scroll:";
 const removeClassOnScroll: string = "-on-scroll:"
 
-const classAddAttribute:string =  "class-add-scroll";
-const classRemoveAttribute:string = "class-remove-scroll";
+const classAddAttribute: string = "class-add-scroll";
+const classRemoveAttribute: string = "class-remove-scroll";
 
 toTrackEls.forEach((el) => {
   const elClassesArr: string[] = [...el.classList];
@@ -15,11 +15,13 @@ toTrackEls.forEach((el) => {
   const classesToAdd = elClassesToChange.filter((className) => !className.startsWith("-"));
   const classesToRemove = elClassesToChange.filter((className) => className.startsWith("-"));
 
+
   const classesToAddScrollStr = classesToAdd.map(className => className.replace(addClassOnScroll, "")).join(" ")
-  const classesToRemoveSCrollStr = classesToRemove.map(className => className.replace(removeClassOnScroll, "")).join(" ")
+  const classesToRemoveScrollStr = classesToRemove.map(className => className.replace(removeClassOnScroll, "")).join(" ")
+  console.log(classesToRemoveScrollStr);
 
   el.setAttribute(classAddAttribute, classesToAddScrollStr);
-  el.setAttribute(classRemoveAttribute, classesToRemoveSCrollStr);
+  el.setAttribute(classRemoveAttribute, classesToRemoveScrollStr);
 })
 
 
@@ -29,8 +31,8 @@ const observer: IntersectionObserver = new IntersectionObserver((entries) => {
       const classesToRemoveStr: string | null = entry.target.getAttribute(classRemoveAttribute)
       const classesToAddStr: string | null = entry.target.getAttribute(classAddAttribute)
 
-      const classesToAdd = classesToAddStr?.split(" ");
-      const classesToRemove = classesToRemoveStr?.split(" ");
+      const classesToAdd = classesToAddStr?.split(" ").filter(className => className !== "");
+      const classesToRemove = classesToRemoveStr?.split(" ").filter(className => className !== "");
 
       classesToAdd?.forEach((className) => {
         entry.target.classList.add(className);
@@ -44,8 +46,8 @@ const observer: IntersectionObserver = new IntersectionObserver((entries) => {
       const classesToAddStr: string | null = entry.target.getAttribute("class-add-scroll")
       const classesToRemoveStr: string | null = entry.target.getAttribute("class-remove-scroll")
 
-      const classesToAdd = classesToAddStr?.split(" ");
-      const classesToRemove = classesToRemoveStr?.split(" ");
+      const classesToAdd = classesToAddStr?.split(" ").filter(className => className !== "");;
+      const classesToRemove = classesToRemoveStr?.split(" ").filter(className => className !== "");
 
       classesToAdd?.forEach((className) => {
         entry.target.classList.remove(className);
