@@ -5,7 +5,10 @@ const headerEl: Element | null = document.querySelector("header");
 const addClassOnScroll: string = "on-scroll:";
 const removeClassOnScroll: string = "-on-scroll:"
 
-toTrackEls.forEach((el, i) => {
+const classAddAttribute:string =  "class-add-scroll";
+const classRemoveAttribute:string = "class-remove-scroll";
+
+toTrackEls.forEach((el) => {
   const elClassesArr: string[] = [...el.classList];
   const elClassesToChange = elClassesArr.filter((className) => className.startsWith(addClassOnScroll) || className.startsWith(removeClassOnScroll));
 
@@ -15,16 +18,16 @@ toTrackEls.forEach((el, i) => {
   const classesToAddScrollStr = classesToAdd.map(className => className.replace(addClassOnScroll, "")).join(" ")
   const classesToRemoveSCrollStr = classesToRemove.map(className => className.replace(removeClassOnScroll, "")).join(" ")
 
-  toTrackEls[i].setAttribute("class-add-scroll", classesToAddScrollStr);
-  toTrackEls[i].setAttribute("class-Remove-scroll", classesToRemoveSCrollStr);
+  el.setAttribute(classAddAttribute, classesToAddScrollStr);
+  el.setAttribute(classRemoveAttribute, classesToRemoveSCrollStr);
 })
 
 
 const observer: IntersectionObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      const classesToRemoveStr: string | null = entry.target.getAttribute("class-add-scroll")
-      const classesToAddStr: string | null = entry.target.getAttribute("class-add-scroll")
+      const classesToRemoveStr: string | null = entry.target.getAttribute(classRemoveAttribute)
+      const classesToAddStr: string | null = entry.target.getAttribute(classAddAttribute)
 
       const classesToAdd = classesToAddStr?.split(" ");
       const classesToRemove = classesToRemoveStr?.split(" ");
@@ -39,7 +42,7 @@ const observer: IntersectionObserver = new IntersectionObserver((entries) => {
 
     } else {
       const classesToAddStr: string | null = entry.target.getAttribute("class-add-scroll")
-      const classesToRemoveStr: string | null = entry.target.getAttribute("class-add-scroll")
+      const classesToRemoveStr: string | null = entry.target.getAttribute("class-remove-scroll")
 
       const classesToAdd = classesToAddStr?.split(" ");
       const classesToRemove = classesToRemoveStr?.split(" ");
