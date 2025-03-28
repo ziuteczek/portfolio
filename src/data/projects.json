@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Tetris",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo deleniti, veniam id, rerum neque ab, eius sunt commodi vero animi illo dolorem consequuntur! Veritatis, eveniet tempora. Explicabo asperiores laboriosam impedit.",
+    "imgSrc": "/src/assets/tetris.jpg",
+    "repository": "https://github.com/ziuteczek/Guessio-client",
+    "technologies": [
+      { "title": "SDL2", "src": "/src/assets/icons/cpp.svg" },
+      { "title": "C++", "src": "/src/assets/icons/SDL2.svg" }
+    ]
+  },
+  {
+    "title": "Tetris",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo deleniti, veniam id, rerum neque ab, eius sunt commodi vero animi illo dolorem consequuntur! Veritatis, eveniet tempora. Explicabo asperiores laboriosam impedit.",
+    "imgSrc": "/src/assets/tetris.jpg",
+    "repository": "https://github.com/ziuteczek/Guessio-client",
+    "technologies": [
+      { "title": "C++", "src": "/src/assets/icons/cpp.svg" },
+      { "title": "SDL2", "src": "/src/assets/icons/SDL2.svg" }
+    ]
+  },
+  {
+    "title": "Tetris",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo deleniti, veniam id, rerum neque ab, eius sunt commodi vero animi illo dolorem consequuntur! Veritatis, eveniet tempora. Explicabo asperiores laboriosam impedit.",
+    "imgSrc": "/src/assets/tetris.jpg",
+    "repository": "https://github.com/ziuteczek/Guessio-client",
+    "technologies": [
+      { "title": "C++", "src": "/src/assets/icons/cpp.svg" },
+      { "title": "SDL2", "src": "/src/assets/icons/SDL2.svg" }
+    ]
+  }
+]

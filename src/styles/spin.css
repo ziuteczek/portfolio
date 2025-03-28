@@ -1,0 +1,49 @@
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin2 {
+  0% {
+    stroke-dasharray: 1, 800;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 400, 400;
+    stroke-dashoffset: -200px;
+  }
+  100% {
+    stroke-dasharray: 800, 1;
+    stroke-dashoffset: -800px;
+  }
+}
+
+.spin2 {
+  transform-origin: center;
+  animation: spin2 1.5s ease-in-out infinite, spin 2s linear infinite;
+  animation-direction: alternate;
+}
+.loading-img {
+  opacity: 0;
+}
+.arrow-icon {
+  transition: opacity 0.15s ease-in, scale 0.15s ease-in;
+  opacity: 0;
+  scale: 0;
+  
+}
+.github-icon {
+  transition: opacity 0.15s ease-in, scale 0.15s ease-in;
+}
+.hover-sping:hover .loading-img {
+  opacity: 1;
+}
+.hover-sping:hover .github-icon {
+  opacity: 0;
+  scale: 0;
+}
+.hover-sping:hover .arrow-icon {
+  opacity: 1;
+  scale: 1;
+}

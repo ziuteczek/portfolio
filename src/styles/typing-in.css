@@ -6,7 +6,7 @@
   bottom: 0;
   right: 0;
   background-color: white;
-  animation: typingReveal 5s steps(15, start) 2s forwards;
+  animation: typingReveal 5s steps(15) 2s forwards;
   transform-origin: right;
 }
 .typing-in::after {
@@ -17,7 +17,7 @@
   left: 0;
   width: 0.25rem;
   background: #000;
-  animation: blink 0.7s infinite, typerIndicatorMoving 5s steps(15, start) 2s forwards;
+  animation: blink 0.7s infinite, typerIndicatorMoving 5s steps(15) 2s forwards;
 }
 @keyframes typingReveal {
   to {

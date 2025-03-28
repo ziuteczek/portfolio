@@ -1,5 +1,5 @@
 ---
-import catSelfie from "../assets/cat-selfie.jpg";
+import catSelfie from "../assets/cat-selfie.png";
 import { Image } from "astro:assets";
 import Wrapper from "../components/Wrapper.astro";
 import SocialIcons from "../components/SocialIcons.astro";
@@ -10,7 +10,7 @@ import "../styles/typing-in.css";
 <header class="mb-px">
   <Wrapper
     size="large"
-    class="lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:pt-14 lg:items-start min-h-svh flex flex-col justify-center items-center"
+    class="lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:pt-14 lg:items-start min-h-svh flex flex-col justify-center items-center mb-10 lg:mb-0"
   >
     <div class="row-start-1 row-end-3 place-self-center">
       <Image
@@ -21,9 +21,7 @@ import "../styles/typing-in.css";
       />
       <SocialIcons class="lg:flex hidden" />
     </div>
-    <div
-      class="lg:self-end lg:text-left text-center flex flex-col justify-center content-center"
-    >
+    <div class="lg:self-end lg:text-left text-center flex flex-col justify-center content-center">
       <h2 class="text-3xl font-bold mt-7">Who am I?</h2>
 
       <p class="text-4xl sm:text-5xl">
@@ -37,8 +35,8 @@ import "../styles/typing-in.css";
       </p>
     </div>
     <a
-      href="#"
-      class="relative overflow-hidden p-5 bg-violet-950 mt-10 text-violet-50 size-fit text-5xl fw w-full rounded-xl cursor-pointer hover:scale-105 hover:text-violet-950 border-2 border-violet-950 transition-all text-center before:top-0 before:bottom-0 before:left-0 before:right-0 inline-block before:absolute before:-translate-y-full hover:before:-translate-0 before:transition-all before:bg-violet-50 before:-z-10"
+      href="#my-projects"
+      class="relative overflow-hidden p-5 bg-violet-950 mt-10 text-violet-50 size-fit text-5xl fw w-full rounded-xl cursor-pointer hover:scale-105 hover:text-violet-950 border-2 border-violet-950 transition-all text-center before:top-0 before:bottom-0 before:left-0 before:right-0 inline-block before:absolute before:-translate-y-full hover:before:-translate-0 before:transition-all before:bg-violet-50 before:-z-20 z-0"
     >
       View my projects!</a
     >

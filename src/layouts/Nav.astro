@@ -6,7 +6,7 @@ import { Image } from "astro:assets";
 ---
 
 <nav
-  class="top-0 fixed w-full h-36 lg:h-auto bg-white transition-colors center lg:block hidden z50"
+  class="top-0 fixed w-full h-36 lg:h-auto bg-white transition-colors center lg:block hidden z-20"
 >
   <Wrapper
     size="large"
@@ -16,10 +16,10 @@ import { Image } from "astro:assets";
       <h1 class="text-3xl font-bold ml-5">Stanisław Dymny</h1>
     </a>
     <ul class="flex text-2xl gap-13 ml-15">
-      <a href="#" class="relative overflow-hidden"><li>Home</li></a>
-      <a href="#about-me" class="relative overflow-hidden"><li>About me</li></a>
-      <a href="#" class="relative overflow-hidden"><li>My projects</li></a>
-      <a href="#" class="relative overflow-hidden"><li>Contact</li></a>
+      <li><a href="#" class="relative overflow-hidden">Home</a></li>
+      <li><a href="#about-me" class="relative overflow-hidden">About me</a></li>
+      <li><a href="#my-projects" class="relative overflow-hidden">My projects</a></li>
+      <li><a href="#" class="relative overflow-hidden">Contact</a></li>
     </ul>
   </Wrapper>
 

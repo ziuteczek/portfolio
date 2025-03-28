@@ -8,27 +8,25 @@ const today: Date = new Date();
 const stasAge: number =
   today.getFullYear() -
   birthDate.getFullYear() -
-  (today <
-  new Date(today.getFullYear(), birthDate.getMonth(), birthDate.getDate())
-    ? 1
-    : 0);
+  (today < new Date(today.getFullYear(), birthDate.getMonth(), birthDate.getDate()) ? 1 : 0);
 ---
 
 <section
   id="about-me"
-  class="relative bg-gradient-to-b from-violet-900 to-violet-950 pt-10 pb-10 transition-all duration-700 animate-scroll on-scroll:bg-red-500"
+  class="relative bg-gradient-to-b from-violet-900 to-violet-950 pt-10 pb-20 transition-all duration-700 animate-scroll on-scroll:bg-red-500"
 >
   <Wrapper size="large" class="flex items-center flex-col sm:flex-row z-10">
-    <div class="lg:flex-5 text-gray-100 sm:mr-5 animate-scroll blur-sm -on-scroll:blur-sm transition-all duration-500">
+    <div
+      class="lg:flex-5 text-gray-100 sm:mr-5 animate-scroll blur-sm -on-scroll:blur-sm transition-all duration-500"
+    >
       <h2 class="text-6xl mt-5 text-nowrap text-center">About Me</h2>
       <p class="text-xl lg:text-justify mb-5 text-center">
-        I'm an {stasAge}-year-old student at the Mechanical and Electronic
-        Technical School in Szczecin. Programming is <span class="font-bold"
-          >my passion.</span
-        > I'm constantly learning new technologies by <span class="font-bold"
-          >coding projects</span
-        >. If you're looking for someone who approaches each project with
-        dedication and is <span class="font-bold">passionate</span>
+        I'm an {stasAge}-year-old student at the Mechanical and Electronic Technical School in
+        Szczecin. Programming is <span class="font-bold">my passion.</span> I'm constantly learning new
+        technologies by <span class="font-bold">coding projects</span>. If you're looking for
+        someone who approaches each project with dedication and is <span class="font-bold"
+          >passionate</span
+        >
         about programming feel free to reach out!
       </p>
     </div>
@@ -39,5 +37,8 @@ const stasAge: number =
     />
   </Wrapper>
   <div class="absolute bg-white h-10 w-6/12 top-0 -left-10 -skew-x-45"></div>
-  <div class="absolute bg-white h-10 w-4/12 bottom-0 -left-10 skew-x-45"></div>
+  <div
+    class="absolute bottom-0 left-1/2 -translate-x-1/2 w-7/12 h-0 border-b-[28px] border-b-stone-200 border-l-[40px] border-l-transparent border-r-[40px] border-r-transparent"
+  >
+  </div>
 </section>
