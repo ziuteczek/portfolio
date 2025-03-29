@@ -2,25 +2,20 @@
 import { Image } from "astro:assets";
 import myPhoto from "../assets/stas-photo.jpg";
 import Wrapper from "../components/Wrapper.astro";
+import stasAge from "../scripts/calcStasAge"
 
-const birthDate: Date = new Date("2007-01-29");
-const today: Date = new Date();
-const stasAge: number =
-  today.getFullYear() -
-  birthDate.getFullYear() -
-  (today < new Date(today.getFullYear(), birthDate.getMonth(), birthDate.getDate()) ? 1 : 0);
 ---
 
 <section
   id="about-me"
-  class="relative bg-gradient-to-b from-violet-900 to-violet-950 pt-10 pb-20 transition-all duration-700 animate-scroll on-scroll:bg-red-500"
+  class="relative bg-gradient-to-b from-violet-900 to-violet-950 pt-10 pb-20 transition-all duration-700 animate-scroll on-scroll:bg-red-500 overflow-clip"
 >
   <Wrapper size="large" class="flex items-center flex-col sm:flex-row z-10">
     <div
-      class="lg:flex-5 text-gray-100 sm:mr-5 animate-scroll blur-sm -on-scroll:blur-sm transition-all duration-500"
+      class="lg:flex-5 text-gray-100 sm:mr-5 "
     >
-      <h2 class="text-6xl mt-5 text-nowrap text-center">About Me</h2>
-      <p class="text-xl lg:text-justify mb-5 text-center">
+      <h2 class="text-6xl mt-5 text-nowrap text-center animate-scroll blur-sm -on-scroll:blur-sm transition-all duration-500 -translate-x-20 -on-scroll:-translate-x-20 opacity-0 -on-scroll:opacity-0">About Me</h2>
+      <p class="text-xl lg:text-justify mb-5 text-center animate-scroll blur-sm -on-scroll:blur-sm transition-all duration-1000 -translate-x-20 -on-scroll:-translate-x-20 opacity-0 -on-scroll:opacity-0">
         I'm an {stasAge}-year-old student at the Mechanical and Electronic Technical School in
         Szczecin. Programming is <span class="font-bold">my passion.</span> I'm constantly learning new
         technologies by <span class="font-bold">coding projects</span>. If you're looking for
@@ -32,7 +27,7 @@ const stasAge: number =
     </div>
     <Image
       src={myPhoto}
-      class="max-h-96 object-contain mb-5 sm:mb-0 animate-scroll blur-sm -on-scroll:blur-sm transition-all duration-500"
+      class="max-h-96 object-contain mb-5 sm:mb-0 animate-scroll blur-sm -on-scroll:blur-sm transition-all duration-1000 translate-x-20 -on-scroll:translate-x-20 opacity-0 -on-scroll:opacity-0"
       alt="Stanisław Dymny sitting in black jacketket"
     />
   </Wrapper>
