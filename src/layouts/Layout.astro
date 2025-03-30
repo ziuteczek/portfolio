@@ -1,20 +1,50 @@
 ---
-  import stasAge from "../scripts/calcStasAge"
+import stasAge from "../scripts/calcStasAge";
 ---
+
 <!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={`Stanisław Dymny is ${stasAge} years old programming enthusiasts who is looking for internship. Great at web development and others!`}>
-    <title>Stanisław Dymny</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <!-- FONT  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- OG Meta Tags  -->
+    <meta property="og:title" content="Stanisław Dymny portfolio" />
+    <meta
+      property="og:description"
+      content={`Stanisław Dymny, an ${stasAge}-year-old programming enthusiast, is seeking an internship. Skilled in web development and more, he’s eager to learn, grow, and contribute to innovative projects!`}
+    />
+    <meta property="og:image" content="https://ziuteczek.github.io/portfolio/cat-selfie.png" />
+    <meta property="og:url" content="https://ziuteczek.github.io/portfolio/" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Stanisław Dymny portfolio" />
+    <meta
+      name="twitter:description"
+      content={`Stanisław Dymny, an ${stasAge}-year-old programming enthusiast, is seeking an internship. Skilled in web development and more, he’s eager to learn, grow, and contribute to innovative projects!`}
+    />
+    <meta name="twitter:image" content="https://ziuteczek.github.io/portfolio/cat-selfie.png" />
+    <meta name="twitter:url" content="https://ziuteczek.github.io/portfolio/" />
+
+    <title>Stanisław Dymny Web Developer</title>
+    <meta
+      name="description"
+      content={`Stanisław Dymny, an ${stasAge}-year-old programming enthusiast, is seeking an internship. Skilled in web development and more, he’s eager to learn, grow, and contribute to innovative projects!`}
+    />
   </head>
   <body class="font-[Inter] scroll-smooth">
+    <noscript>Please turn on javscript!</noscript>
     <slot />
   </body>
 </html>

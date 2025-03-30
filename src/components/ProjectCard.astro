@@ -26,7 +26,7 @@ const icons = import.meta.glob<{ default: ImageMetadata }>(
 const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/*.{jpeg,jpg,png,svg}");
 ---
 
-<div class="rounded-xl p-3 bg-violet-500 text-violet-100 max-w-80 w-full grow">
+<div class="rounded-xl p-3 bg-violet-500 text-violet-100 max-w-80 w-full">
   <div class="relative">
     <Image
       src={images[imgSrc]()}
@@ -38,7 +38,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/*.{jpeg
       href={repository}
       target="_blank"
       rel="noopener noreferrer"
-      class="absolute hover-sping -bottom-3 -right-3 cursor-pointer hover:scale-95 transition-transform"
+      class="absolute hover-sping -bottom-3 -right-3 cursor-pointer hover:scale-90 transition-transform"
     >
       <div class="relative bg-zinc-900 p-2 rounded-full size-20">
         <Image src={github} alt="github logo" class="github-icon" loading="lazy" />
