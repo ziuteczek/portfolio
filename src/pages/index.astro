@@ -5,15 +5,18 @@ import Navigation from "../layouts/Nav.astro";
 import Header from "../layouts/Header.astro";
 import AboutMe from "../layouts/AboutMe.astro";
 import MyProjects from "../layouts/MyProjects.astro";
-
+import Contact from "../layouts/Contact.astro";
+import Footeer from "../layouts/Footeer.astro";
 ---
 
 <Layout>
   <Navigation />
   <Header />
-  <main >
+  <main>
     <AboutMe />
-    <MyProjects/>
+    <MyProjects />
+    <Contact />
   </main>
+  <Footeer />
 </Layout>
 <script src="../scripts/handleScroll.ts"></script>

@@ -1,0 +1,88 @@
+---
+import Wrapper from "../components/Wrapper.astro";
+
+import emailIcon from "../assets/icons/email white.svg";
+import discordIcon from "../assets/icons/discord.svg";
+import linkedInIcon from "../assets/icons/linked-in white.svg";
+import { Image } from "astro:assets";
+---
+
+<section
+  class="relative bg-gradient-to-b from-violet-900 to-violet-950 text-violet-50 pb-10 overflow-hidden"
+>
+  <Wrapper size="large">
+    <h2 class="text-center text-5xl sm:text-7xl pt-10">Contact</h2>
+    <div class="flex lg:flex-row flex-col">
+      <form method="POST" class="contact-form flex flex-col flex-1/2">
+        <label for="form-name">Name</label>
+        <input
+          id="form-name"
+          name="name"
+          placeholder="Your name"
+          type="text"
+          maxlength="20"
+          required
+          class="relative text-black bg-violet-50 mb-5 focus:bg-stone-200 p-1 rounded-sm"
+        />
+        <label for="form-email">Email</label>
+        <input
+          id="form-email"
+          name="email"
+          type="email"
+          placeholder="example@email.com"
+          maxlength="254"
+          required
+          class="text-black bg-violet-50 mb-5 p-1 rounded-sm"
+        />
+        <label for="form-text">Message</label>
+        <textarea
+          id="form-text"
+          required
+          name="message"
+          placeholder="Your message..."
+          maxlength="500"
+          class="text-black bg-violet-50 min-h-30 mb-5 p-1 rounded-sm overflow-visible"></textarea>
+        <button
+          type="submit"
+          class="relative bg-violet-50 text-black text-4xl pt-3 pb-3 hover:text-violet-100 before:size-px before:absolute before:bg-violet-800 cursor-pointer before:rounded-full before:m-auto before:left-0 before:right-0 before:bottom-0 before:top-0 hover:before:scale-70000 hover:before:opacity-100 before:opacity-0 overflow-hidden before:transition-transform before:duration-3000 rounded-md hover:scale-95 duration-300"
+          ><span class="z-20">Send message</span></button
+        >
+      </form>
+
+      <address class="flex-1/2 flex justify-center items-center flex-col">
+        <div
+          class="flex flex-row gap-3 sm:text-3xl lg:flex-col mt-5 flex-wrap justify-center text-xl"
+        >
+          <a href="mailto:dymnystan@gmail.com" class="not-italic text-nowrap">
+            <Image src={emailIcon} alt="email icon" class="inline h-10 w-10" /> dymnystan@gmail.com</a
+          >
+
+          <a href="https://discordapp.com/users/442365920263012353" class="not-italic text-nowrap">
+            <Image src={discordIcon} alt="discord icon" class="inline h-10 w-10" /> ziuteczek</a
+          >
+          <a
+            href="https://www.linkedin.com/in/stanis%C5%82aw-dymny-450009282/"
+            class="not-italic text-nowrap"
+          >
+            <Image src={linkedInIcon} alt="discord linked in" class="inline h-10 w-10" /> Stanisław Dymny</a
+          >
+        </div>
+      </address>
+    </div>
+  </Wrapper>
+  <div
+    class="absolute top-0 left-1/2 -translate-x-1/2 w-7/12 h-0 border-b-[28px] border-b-stone-200 border-l-[40px] border-l-transparent border-r-[40px] border-r-transparent rotate-180"
+  >
+  </div>
+</section>
+<script src="../scripts/handleContactForm.ts"></script>
+<style>
+  @keyframes movePopupBar {
+    to {
+      transform: translateX(100%);
+    }
+  }
+  .form-submit-bar {
+    animation: movePopupBar 3s linear;
+  }
+</style>

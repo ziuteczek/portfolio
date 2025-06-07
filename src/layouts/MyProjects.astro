@@ -2,14 +2,13 @@
 import projectsData from "../data/projects.json";
 import ProjectCard from "../components/ProjectCard.astro";
 import Wrapper from "../components/Wrapper.astro";
-
 ---
 
-<section id="my-projects" class="bg-stone-200 ">
+<section id="my-projects" class="bg-stone-200 pb-7">
   <Wrapper size="large">
-  <h2 class="text-7xl text-center pt-5">My projects</h2>
-  <div class="flex gap-5 justify-center mt-7 overflow-x-scroll flex-wrap">
-    {projectsData.map((project) => <ProjectCard {...project} />)}
-  </div>
-</Wrapper>
+    <h2 class="text-7xl text-center ">My projects</h2>
+    <div class="flex gap-5 justify-center mt-7 flex-wrap">
+      {projectsData.map((project, i) => <ProjectCard {...project} index={i} />)}
+    </div>
+  </Wrapper>
 </section>
