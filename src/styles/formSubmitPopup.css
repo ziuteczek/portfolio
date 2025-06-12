@@ -1,0 +1,25 @@
+.form-submit-bar {
+  animation: form-submit-popup-bar-shrinking 5s linear forwards;
+}
+.form-submit-popup {
+  animation: form-submit-popup-appear 5s linear forwards;
+}
+@keyframes form-submit-popup-bar-shrinking {
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes form-submit-popup-appear {
+  0% {
+    transform: translateX(100%);
+  }
+  10% {
+    transform: translateX(0);
+  }
+  90% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

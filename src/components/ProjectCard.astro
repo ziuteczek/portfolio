@@ -13,6 +13,7 @@ interface Props {
   description: string;
   imgSrc: string;
   repository: string;
+  index: number;
   technologies: technologies[];
 }
 interface technologies {
@@ -23,10 +24,18 @@ const { title, description, imgSrc, technologies, repository } = Astro.props;
 const icons = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/icons/*.{jpeg,jpg,png,svg}"
 );
-const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/*.{jpeg,jpg,png,svg}");
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/*.{jpeg,jpg,png,svg}"
+);
+
+const delayClasses = ["delay-200", "delay-600", "delay-1200"];
+
+const delayClass = delayClasses[Astro.props.index];
 ---
 
-<div class=`rounded-xl p-3 bg-violet-500 text-zinc-100 max-w-80 w-full`>
+<div
+  class={`rounded-xl p-3 bg-violet-500 text-zinc-100 max-w-80 w-full transition-all ${delayClass} duration-500 animate-scroll opacity-1 -on-scroll:opacity-1 translate-y-20 -on-scroll:translate-y-20 blur-2xl -on-scroll:blur-2xl`}
+>
   <div class="relative">
     <Image
       src={images[imgSrc]()}
@@ -41,7 +50,12 @@ const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/*.{jpeg
       class="absolute hover-sping -bottom-3 -right-3 cursor-pointer hover:scale-90"
     >
       <div class="relative bg-zinc-900 p-2 rounded-full size-20">
-        <Image src={github} alt="github logo" class="github-icon" loading="lazy" />
+        <Image
+          src={github}
+          alt="github logo"
+          class="github-icon"
+          loading="lazy"
+        />
         <Image
           src={linkIcon}
           alt="link icon"

@@ -8,6 +8,7 @@
   background-color: white;
   animation: typingReveal 5s steps(15) 2s forwards;
   transform-origin: right;
+  
 }
 .typing-in::after {
   position: absolute;
