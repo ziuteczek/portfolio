@@ -14,11 +14,7 @@ interface Props {
   imgSrc: string;
   repository: string;
   index: number;
-  technologies: technologies[];
-}
-interface technologies {
-  title: string;
-  src: string;
+  technologies: string[];
 }
 const { title, description, imgSrc, technologies, repository } = Astro.props;
 const icons = import.meta.glob<{ default: ImageMetadata }>(
@@ -34,7 +30,7 @@ const delayClass = delayClasses[Astro.props.index];
 ---
 
 <div
-  class={`rounded-xl p-3 bg-violet-500 text-zinc-100 max-w-80 w-full transition-all ${delayClass} duration-500 animate-scroll opacity-1 -on-scroll:opacity-1 translate-y-20 -on-scroll:translate-y-20 blur-2xl -on-scroll:blur-2xl`}
+  class={`rounded-xl p-3 bg-white text-black max-w-80 w-full shadow-3xl transition-all ${delayClass} duration-500 animate-scroll opacity-1 -on-scroll:opacity-1 translate-y-20 -on-scroll:translate-y-20 blur-2xl -on-scroll:blur-2xl h-min`}
 >
   <div class="relative">
     <Image
@@ -83,16 +79,10 @@ const delayClass = delayClasses[Astro.props.index];
   </div>
   <h3 class="text-3xl font-bold mt-3">{title}</h3>
   <p>{description}</p>
-  <div class="flex justify-evenly">
+  <div class="flex justify-evenly mt-3">
     {
       technologies.map((technology) => (
-        <Image
-          src={icons[technology.src]()}
-          alt={technology.title}
-          title={technology.title}
-          class="max-h-10 object-contain max-w-10"
-          loading="lazy"
-        />
+        <p class="bg-gray-200 p-1 pl-3 pr-3 rounded-full text-gray-800">{technology}</p>
       ))
     }
   </div>

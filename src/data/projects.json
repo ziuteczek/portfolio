@@ -5,8 +5,7 @@
     "imgSrc": "/src/assets/tetris.jpg",
     "repository": "https://github.com/ziuteczek/Guessio-client",
     "technologies": [
-      { "title": "SDL2", "src": "/src/assets/icons/cpp.svg" },
-      { "title": "C++", "src": "/src/assets/icons/SDL2.svg" }
+      "SDL2","C++"
     ]
   },
   {
@@ -15,8 +14,7 @@
     "imgSrc": "/src/assets/tetris.jpg",
     "repository": "https://github.com/ziuteczek/Guessio-client",
     "technologies": [
-      { "title": "C++", "src": "/src/assets/icons/cpp.svg" },
-      { "title": "SDL2", "src": "/src/assets/icons/SDL2.svg" }
+      "SDL2","C++"
     ]
   },
   {
@@ -25,8 +23,7 @@
     "imgSrc": "/src/assets/tetris.jpg",
     "repository": "https://github.com/ziuteczek/Guessio-client",
     "technologies": [
-      { "title": "C++", "src": "/src/assets/icons/cpp.svg" },
-      { "title": "SDL2", "src": "/src/assets/icons/SDL2.svg" }
+      "SDL2","C++"
     ]
   }
 ]

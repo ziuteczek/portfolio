@@ -8,7 +8,7 @@ import { Image } from "astro:assets";
 ---
 
 <section
-  class="relative bg-gradient-to-b from-violet-900 to-violet-950 text-violet-50 pb-10 overflow-hidden"
+  class="relative bg-gradient-to-b from-violet-900 to-violet-950 text-violet-50 pb-20 overflow-hidden"
 >
   <Wrapper size="large">
     <h2 class="text-center text-5xl sm:text-7xl pt-10">Contact</h2>
@@ -41,7 +41,8 @@ import { Image } from "astro:assets";
           name="message"
           placeholder="Your message..."
           maxlength="500"
-          class="text-black bg-violet-50 min-h-30 mb-5 p-1 rounded-sm overflow-visible"></textarea>
+          class="text-black bg-violet-50 min-h-30 mb-5 p-1 rounded-sm overflow-visible"
+        ></textarea>
         <button
           type="submit"
           class="relative bg-violet-50 text-black text-4xl pt-3 pb-3 hover:text-violet-100 before:size-px before:absolute before:bg-violet-800 cursor-pointer before:rounded-full before:m-auto before:left-0 before:right-0 before:bottom-0 before:top-0 hover:before:scale-70000 hover:before:opacity-100 before:opacity-0 overflow-hidden before:transition-transform before:duration-3000 rounded-md hover:scale-95 duration-300"
@@ -57,14 +58,25 @@ import { Image } from "astro:assets";
             <Image src={emailIcon} alt="email icon" class="inline h-10 w-10" /> dymnystan@gmail.com</a
           >
 
-          <a href="https://discordapp.com/users/442365920263012353" class="not-italic text-nowrap">
-            <Image src={discordIcon} alt="discord icon" class="inline h-10 w-10" /> ziuteczek</a
+          <a
+            href="https://discordapp.com/users/442365920263012353"
+            class="not-italic text-nowrap"
+          >
+            <Image
+              src={discordIcon}
+              alt="discord icon"
+              class="inline h-10 w-10"
+            /> ziuteczek</a
           >
           <a
             href="https://www.linkedin.com/in/stanis%C5%82aw-dymny-450009282/"
             class="not-italic text-nowrap"
           >
-            <Image src={linkedInIcon} alt="discord linked in" class="inline h-10 w-10" /> Stanisław Dymny</a
+            <Image
+              src={linkedInIcon}
+              alt="discord linked in"
+              class="inline h-10 w-10"
+            /> Stanisław Dymny</a
           >
         </div>
       </address>
@@ -72,6 +84,10 @@ import { Image } from "astro:assets";
   </Wrapper>
   <div
     class="absolute top-0 left-1/2 -translate-x-1/2 w-7/12 h-0 border-b-[28px] border-b-stone-200 border-l-[40px] border-l-transparent border-r-[40px] border-r-transparent rotate-180"
+  >
+  </div>
+  <div
+    class="absolute bottom-0 left-1/2 -translate-x-1/2 w-7/12 h-0 border-b-[28px] border-b-gray-300 border-l-[40px] border-l-transparent border-r-[40px] border-r-transparent "
   >
   </div>
 </section>
