@@ -43,19 +43,19 @@ const observer: IntersectionObserver = new IntersectionObserver((entries) => {
       })
 
     } else {
-      const classesToAddStr: string | null = entry.target.getAttribute("class-add-scroll")
-      const classesToRemoveStr: string | null = entry.target.getAttribute("class-remove-scroll")
+        // const classesToAddStr: string | null = entry.target.getAttribute("class-add-scroll")
+        // const classesToRemoveStr: string | null = entry.target.getAttribute("class-remove-scroll")
 
-      const classesToAdd = classesToAddStr?.split(" ").filter(className => className !== "");;
-      const classesToRemove = classesToRemoveStr?.split(" ").filter(className => className !== "");
+        // const classesToAdd = classesToAddStr?.split(" ").filter(className => className !== "");;
+        // const classesToRemove = classesToRemoveStr?.split(" ").filter(className => className !== "");
 
-      classesToAdd?.forEach((className) => {
-        entry.target.classList.remove(className);
-      })
+        // classesToAdd?.forEach((className) => {
+        //   entry.target.classList.remove(className);
+        // })
 
-      classesToRemove?.forEach((className) => {
-        entry.target.classList.add(className);
-      })
+        // classesToRemove?.forEach((className) => {
+        //   entry.target.classList.add(className);
+        // })
     }
   });
 });

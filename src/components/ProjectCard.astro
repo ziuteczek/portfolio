@@ -24,26 +24,29 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/*.{jpeg,jpg,png,svg}"
 );
 
-const delayClasses = ["delay-200", "delay-600", "delay-1200"];
+const cardDelayClasses = ["delay-200", "delay-600", "delay-1200"];
 
-const delayClass = delayClasses[Astro.props.index];
+const cardDelayClass = cardDelayClasses[Astro.props.index];
 ---
 
 <div
-  class={`rounded-xl p-3 bg-white text-black max-w-80 w-full shadow-3xl transition-all ${delayClass} duration-500 animate-scroll opacity-1 -on-scroll:opacity-1 translate-y-20 -on-scroll:translate-y-20 blur-2xl -on-scroll:blur-2xl h-min`}
+  class={`rounded-xl p-3 bg-white text-black max-w-80 w-full shadow-3xl transition-all duration-500 animate-scroll opacity-1 -on-scroll:opacity-1 translate-y-20 -on-scroll:translate-y-20 blur-2xl -on-scroll:blur-2xl h-min`}
+  style={`transition-delay: ${200 + Astro.props.index * 400}ms;`}
 >
   <div class="relative">
     <Image
       src={images[imgSrc]()}
       alt={title}
-      class="max-h-full max-w-full h-50 object-cover mt-3 rounded-xl"
+      class="max-h-full max-w-full h-50 object-cover mt-3 rounded-xl animate-scroll blur-md transition-all duration-1000 -on-scroll:blur-md"
+      style={`transition-delay: ${500 + Astro.props.index * 400}ms;`}
       loading="lazy"
     />
     <a
       href={repository}
       target="_blank"
       rel="noopener noreferrer"
-      class="absolute hover-sping -bottom-3 -right-3 cursor-pointer hover:scale-90"
+      class="absolute hover-sping -bottom-3 -right-3 cursor-pointer hover:scale-90 animate-scroll transition-transform delay-1000 duration-1000 scale-0 rotate-360 -on-scroll:scale-0 -on-scroll:rotate-360"
+      style={`transition-delay: ${1200 + Astro.props.index * 400}ms;`}
     >
       <div class="relative bg-zinc-900 p-2 rounded-full size-20">
         <Image
@@ -82,7 +85,9 @@ const delayClass = delayClasses[Astro.props.index];
   <div class="flex justify-evenly mt-3">
     {
       technologies.map((technology) => (
-        <p class="bg-gray-200 p-1 pl-3 pr-3 rounded-full text-gray-800">{technology}</p>
+        <p class="bg-gray-200 p-1 pl-3 pr-3 rounded-full text-gray-800">
+          {technology}
+        </p>
       ))
     }
   </div>
