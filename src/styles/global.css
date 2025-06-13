@@ -1,6 +1,24 @@
 @import "tailwindcss";
 @layer base {
-    :root {
-        --filter-violet-950: invert(19%) sepia(22%) saturate(3944%) hue-rotate(238deg) brightness(83%) contrast(124%);
-    }
+  :root {
+    --filter-violet-950: invert(19%) sepia(22%) saturate(3944%)
+      hue-rotate(238deg) brightness(83%) contrast(124%);
+  }
+}
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter-Regular.woff2") format("woff2"),
+    url("./fonts/Inter-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("./fonts/RobotoMono-Regular.woff2") format("woff2"),
+    url("./fonts/RobotoMono-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }

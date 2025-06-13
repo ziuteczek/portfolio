@@ -18,7 +18,6 @@ toTrackEls.forEach((el) => {
 
   const classesToAddScrollStr = classesToAdd.map(className => className.replace(addClassOnScroll, "")).join(" ")
   const classesToRemoveScrollStr = classesToRemove.map(className => className.replace(removeClassOnScroll, "")).join(" ")
-  console.log(classesToRemoveScrollStr);
 
   el.setAttribute(classAddAttribute, classesToAddScrollStr);
   el.setAttribute(classRemoveAttribute, classesToRemoveScrollStr);
