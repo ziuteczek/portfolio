@@ -8,43 +8,46 @@ import "../styles/typing-in.css";
 ---
 
 <header class="mb-px overflow-hidden" id="header">
-  <Wrapper
-    size="large"
-    class="lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:pt-14 lg:items-start min-h-svh flex flex-col justify-center items-center mb-10 lg:mb-0"
-  >
-    <div class="row-start-1 row-end-3 place-self-center">
-      <Image
-        src={catSelfie}
-        alt="Stanisław Dymny with his tuxedo cat Tosia"
-        class="bg-center object-cover aspect-square max-h-96 max-w-96 size-full rounded-full animate-scroll -on-scroll:-translate-x-20 -on-scroll:blur-xl -on-scroll:opacity-0 blur-xl opacity-0 -translate-x-20 transition-all duration-700"
-        loading="eager"
-        fetchpriority="high"
-      />
-      <SocialIcons
-        class="lg:flex hidden animate-scroll -on-scroll:-translate-x-20 -on-scroll:blur-xl -on-scroll:opacity-0 blur-xl opacity-0 -translate-x-20 transition-all duration-700 delay-500"
-      />
-    </div>
-    <div
-      class="lg:self-end lg:text-left text-center flex flex-col justify-center content-center animate-scroll -translate-y-30 -on-scroll:-translate-y-30 duration-800 opacity-0 -on-scroll:opacity-0 blur-xl -on-scroll:blur-xl"
-    >
-      <h2 class="text-3xl mt-7">Who am I?</h2>
-      <p class="text-4xl sm:text-5xl">
-        My name is
-        <strong
-          class="animate-scroll on-scroll:typing-in text-violet-950  text-center relative -z-10 font-[Roboto_Mono] text-nowrap "
-          >Stanisław Dymny</strong
-        >
-        <br />
-        <span class="text-center">and I'm web developer</span>
-      </p>
-    </div>
-    <div class="animate-scroll transition-all translate-y-30 -on-scroll:translate-y-30 opacity-0 -on-scroll:opacity-0 blur-xl -on-scroll:blur-xl delay-500 duration-500">
-      <a
-        href="#my-projects"
-        class="relative overflow-hidden p-5 bg-violet-950 mt-10 text-violet-50 size-fit text-5xl fw w-full rounded-xl cursor-pointer hover:scale-105 hover:text-violet-950 border-2 border-violet-950 transition-all text-center before:top-0 before:bottom-0 before:left-0 before:right-0 inline-block before:absolute before:-translate-y-full hover:before:-translate-0 before:transition-all before:bg-violet-50 before:-z-20 z-0 "
-      >
-        View my projects!</a
-      >
-    </div>
-  </Wrapper>
+	<Wrapper
+		size="large"
+		class="lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:pt-14 lg:items-start min-h-svh flex flex-col justify-center items-center mb-10 lg:mb-0"
+	>
+		<div class="row-start-1 row-end-3 place-self-center">
+			<Image
+				src={catSelfie}
+				alt="Stanisław Dymny with his tuxedo cat Tosia"
+				class="bg-center object-cover aspect-square max-h-96 max-w-96 size-full rounded-full animate-scroll -on-scroll:-translate-x-20 -on-scroll:blur-xl -on-scroll:opacity-0 blur-xl opacity-0 -translate-x-20 transition-all duration-700"
+				loading="eager"
+				fetchpriority="high"
+			/>
+			<SocialIcons
+				class="lg:flex hidden animate-scroll -on-scroll:-translate-x-20 -on-scroll:blur-xl -on-scroll:opacity-0 blur-xl opacity-0 -translate-x-20 transition-all duration-700 delay-500"
+			/>
+		</div>
+		<div
+			class="lg:self-end lg:text-left text-center flex flex-col justify-center content-center animate-scroll -translate-y-30 -on-scroll:-translate-y-30 duration-800 opacity-0 -on-scroll:opacity-0 blur-xl -on-scroll:blur-xl"
+		>
+			<p class="text-4xl sm:text-5xl">
+				My name is <strong
+					class="animate-scroll on-scroll:typing-in text-center relative -z-10 font-[Roboto_Mono] text-nowrap"
+					>Stanisław Dymny</strong
+				>
+				<br />
+				<span class="text-center"
+					>and I'm <span class="font-bold text-violet-950"
+						>web developer</span
+					></span
+				>
+			</p>
+		</div>
+		<div
+			class="animate-scroll transition-all translate-y-30 -on-scroll:translate-y-30 opacity-0 -on-scroll:opacity-0 blur-xl -on-scroll:blur-xl delay-500 duration-500"
+		>
+			<a
+				href="#my-projects"
+				class="relative overflow-hidden border-3 pl-10 pr-10 pt-5 pb-5 bg-violet-950 mt-10 text-violet-50 size-fit text-3xl rounded-md cursor-pointer hover:scale-105 hover:text-violet-950 border-violet-950 transition-all text-center before:top-0 before:bottom-0 before:left-0 before:right-0 inline-block before:absolute before:-translate-y-full hover:before:-translate-0 before:transition-all before:bg-violet-50 before:-z-20 z-0"
+				>View my projects!</a
+			>
+		</div>
+	</Wrapper>
 </header>
