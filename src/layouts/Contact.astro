@@ -1,121 +1,135 @@
 ---
 import Wrapper from "../components/Wrapper.astro";
 
-import emailIcon from "../assets/icons/email white.svg";
+import githubIcon from "../assets/icons/github-white.svg";
 import discordIcon from "../assets/icons/discord.svg";
 import linkedInIcon from "../assets/icons/linked-in white.svg";
 import { Image } from "astro:assets";
 ---
 
 <section
-  class="relative bg-violet-950 text-white pb-20 overflow-hidden"
-  id="contact"
+	class="relative bg-violet-950 text-white pb-20 overflow-hidden"
+	id="contact"
 >
-  <Wrapper size="large">
-    <h2 class="text-center text-5xl sm:text-7xl pt-10">Contact</h2>
-    <div class="flex lg:flex-row flex-col">
-      <form method="POST" class="contact-form flex flex-col flex-1/2">
-        <label
-          for="form-name"
-          class="animate-scroll blur-xl opacity-1 -translate-y-10 -on-scroll:blur-xl -on-scroll:opacity-1 -on-scroll:-translate-y-10 transition-all duration-500"
-          >Name</label
-        >
-        <input
-          id="form-name"
-          name="name"
-          placeholder="Your name"
-          type="text"
-          maxlength="20"
-          required
-          class="relative text-black bg-violet-50 mb-5 focus:bg-stone-200 p-1 rounded-sm animate-scroll blur-xl opacity-1 -translate-y-10 -on-scroll:blur-xl -on-scroll:opacity-1 -on-scroll:-translate-y-10 transition-all duration-500"
-        />
-        <label
-          for="form-email"
-          class="animate-scroll blur-xl opacity-1 -translate-y-10 -on-scroll:blur-xl -on-scroll:opacity-1 -on-scroll:-translate-y-10 transition-all duration-500 delay-400"
-          >Email</label
-        >
+	<Wrapper size="large">
+		<div class="flex lg:flex-row flex-col pt-10">
+			<address class="flex-1/2">
+				<h2
+					class="text-left text-5xl sm:text-5xl not-italic w-full font-bold mt-10"
+				>
+					Contact
+				</h2>
+				<p class="max-w-100">
+					I encourage you to connect on Linkedin! Curious about my
+					work? Visit Github. I am also available on Discord.
+				</p>
+				<div
+					class="flex flex-row gap-3 sm:text-3xl lg:flex-col mt-5 flex-wrap justify-center"
+				>
+					<a
+						href="https:www.github.com/ziuteczek"
+						class="relative not-italic text-nowrap before:absolute before:-left-2 before:transition-opacity before:duration-300 before:w-1 before:bg-white before:top-0 before:bottom-0 before:opacity-0 hover:before:opacity-100 transition-all animate-scroll duration-500 translate-x-10 -on-scroll:translate-x-10 blur-md -on-scroll:blur-md opacity-0 -on-scroll:opacity-0 text-xl"
+					>
+						<Image
+							src={githubIcon}
+							alt="github icon"
+							class="inline h-10 w-10"
+						/> Github</a
+					>
 
-        <input
-          id="form-email"
-          name="email"
-          type="email"
-          placeholder="example@email.com"
-          maxlength="254"
-          required
-          class="text-black bg-violet-50 mb-5 p-1 rounded-sm animate-scroll blur-xl opacity-1 -translate-y-10 -on-scroll:blur-xl -on-scroll:opacity-1 -on-scroll:-translate-y-10 transition-all duration-500 delay-400"
-        />
-        <label
-          for="form-text"
-          class="animate-scroll blur-xl opacity-1 -translate-y-10 -on-scroll:blur-xl -on-scroll:opacity-1 -on-scroll:-translate-y-10 transition-all duration-500 delay-800"
-          >Message</label
-        >
-        <textarea
-          id="form-text"
-          required
-          name="message"
-          placeholder="Your message..."
-          maxlength="500"
-          class="text-black bg-violet-50 min-h-30 mb-5 p-1 rounded-sm overflow-visible animate-scroll blur-xl opacity-1 -translate-y-10 -on-scroll:blur-xl -on-scroll:opacity-1 -on-scroll:-translate-y-10 transition-all duration-500 delay-800"
-        ></textarea>
-        <button
-          type="submit"
-          class="relative bg-white text-black text-4xl pt-3 pb-3 rounded-md cursor-pointer animate-scroll blur-xl opacity-1 -translate-y-10 -on-scroll:blur-xl -on-scroll:opacity-1 -on-scroll:-translate-y-10 transition-all duration-500 delay-1200"
-          ><span class="z-20">Send message</span></button
-        >
-      </form>
+					<a
+						href="https://discordapp.com/users/442365920263012353"
+						class="relative not-italic text-nowrap before:absolute before:-left-2 before:transition-opacity before:duration-300 before:w-1 before:bg-white before:top-0 before:bottom-0 before:opacity-0 hover:before:opacity-100 transition-all animate-scroll duration-500 translate-x-10 -on-scroll:translate-x-10 blur-md -on-scroll:blur-md opacity-0 -on-scroll:opacity-0 delay-300 text-xl"
+					>
+						<Image
+							src={discordIcon}
+							alt="discord icon"
+							class="inline h-10 w-10"
+						/> Discord</a
+					>
+					<a
+						href="https://www.linkedin.com/in/stanis%C5%82aw-dymny-450009282/"
+						class="relative not-italic text-nowrap before:absolute before:-left-2 before:transition-opacity before:duration-300 before:w-1 before:bg-white before:top-0 before:bottom-0 before:opacity-0 hover:before:opacity-100 transition-all animate-scroll duration-500 translate-x-10 -on-scroll:translate-x-10 blur-md -on-scroll:blur-md opacity-0 -on-scroll:opacity-0 delay-600 text-xl"
+					>
+						<Image
+							src={linkedInIcon}
+							alt="discord linked in"
+							class="inline h-10 w-10"
+						/> Linkedin</a
+					>
+				</div>
+			</address>
+			<form method="POST" class="contact-form flex flex-col flex-1/2">
+				<label
+					for="form-name"
+					class="animate-scroll blur-xl opacity-1 -translate-y-10 -on-scroll:blur-xl -on-scroll:opacity-1 -on-scroll:-translate-y-10 transition-all duration-500"
+					>Name</label
+				>
+				<input
+					id="form-name"
+					name="name"
+					placeholder="Your name"
+					type="text"
+					maxlength="20"
+					required
+					class="relative text-black bg-violet-50 mb-5 focus:bg-stone-200 p-1 rounded-sm animate-scroll blur-xl opacity-1 -translate-y-10 -on-scroll:blur-xl -on-scroll:opacity-1 -on-scroll:-translate-y-10 transition-all duration-500"
+				/>
+				<label
+					for="form-email"
+					class="animate-scroll blur-xl opacity-1 -translate-y-10 -on-scroll:blur-xl -on-scroll:opacity-1 -on-scroll:-translate-y-10 transition-all duration-500 delay-400"
+					>Email</label
+				>
 
-      <address class="flex-1/2 flex justify-center items-center flex-col">
-        <div
-          class="flex flex-row gap-3 sm:text-3xl lg:flex-col mt-5 flex-wrap justify-center text-xl"
-        >
-          <a
-            href="mailto:dymnystan@gmail.com"
-            class="relative not-italic text-nowrap before:absolute before:-left-2 before:transition-opacity before:duration-300 before:w-1 before:bg-white before:top-0 before:bottom-0 before:opacity-0 hover:before:opacity-100 transition-all animate-scroll duration-500 translate-x-10 -on-scroll:translate-x-10 blur-md -on-scroll:blur-md opacity-0 -on-scroll:opacity-0"
-          >
-            <Image src={emailIcon} alt="email icon" class="inline h-10 w-10" /> dymnystan@gmail.com</a
-          >
-
-          <a
-            href="https://discordapp.com/users/442365920263012353"
-            class="relative not-italic text-nowrap before:absolute before:-left-2 before:transition-opacity before:duration-300 before:w-1 before:bg-white before:top-0 before:bottom-0 before:opacity-0 hover:before:opacity-100 transition-all animate-scroll duration-500 translate-x-10 -on-scroll:translate-x-10 blur-md -on-scroll:blur-md opacity-0 -on-scroll:opacity-0 delay-300"
-          >
-            <Image
-              src={discordIcon}
-              alt="discord icon"
-              class="inline h-10 w-10"
-            /> ziuteczek</a
-          >
-          <a
-            href="https://www.linkedin.com/in/stanis%C5%82aw-dymny-450009282/"
-            class="relative not-italic text-nowrap before:absolute before:-left-2 before:transition-opacity before:duration-300 before:w-1 before:bg-white before:top-0 before:bottom-0 before:opacity-0 hover:before:opacity-100 transition-all animate-scroll duration-500 translate-x-10 -on-scroll:translate-x-10 blur-md -on-scroll:blur-md opacity-0 -on-scroll:opacity-0 delay-600"
-          >
-            <Image
-              src={linkedInIcon}
-              alt="discord linked in"
-              class="inline h-10 w-10"
-            /> Stanisław Dymny</a
-          >
-        </div>
-      </address>
-    </div>
-  </Wrapper>
-  <div
-    class="absolute top-0 left-1/2 -translate-x-1/2 w-7/12 h-0 border-b-[28px] border-b-stone-200 border-l-[40px] border-l-transparent border-r-[40px] border-r-transparent rotate-180"
-  >
-  </div>
-  <div
-    class="absolute bottom-0 left-1/2 -translate-x-1/2 w-7/12 h-0 border-b-[28px] border-b-gray-300 border-l-[40px] border-l-transparent border-r-[40px] border-r-transparent"
-  >
-  </div>
+				<input
+					id="form-email"
+					name="email"
+					type="email"
+					placeholder="example@email.com"
+					maxlength="254"
+					required
+					class="text-black bg-violet-50 mb-5 p-1 rounded-sm animate-scroll blur-xl opacity-1 -translate-y-10 -on-scroll:blur-xl -on-scroll:opacity-1 -on-scroll:-translate-y-10 transition-all duration-500 delay-400"
+				/>
+				<label
+					for="form-text"
+					class="animate-scroll blur-xl opacity-1 -translate-y-10 -on-scroll:blur-xl -on-scroll:opacity-1 -on-scroll:-translate-y-10 transition-all duration-500 delay-800"
+					>Message</label
+				>
+				<textarea
+					id="form-text"
+					required
+					name="message"
+					placeholder="Your message..."
+					maxlength="500"
+					class="text-black bg-violet-50 min-h-30 mb-5 p-1 rounded-sm overflow-visible animate-scroll blur-xl opacity-1 -translate-y-10 -on-scroll:blur-xl -on-scroll:opacity-1 -on-scroll:-translate-y-10 transition-all duration-500 delay-800"
+				></textarea>
+				<div class="w-full">
+					<div class="animate-scroll blur-xl opacity-1 -translate-y-10 -on-scroll:blur-xl -on-scroll:opacity-1 -on-scroll:-translate-y-10 transition-all duration-500 delay-1200 ">
+						<button
+							type="submit"
+							class="relative w-full bg-white overflow-hidden text-violet-950 text-xl pt-3 pb-3 rounded-md cursor-pointer font-black after:top-0 after:right-0 after:bottom-0 after:left-0  after:absolute after:-translate-y-full hover:after:-translate-0 after:transition-all after:-z-20 z-0 border-white border-3 hover:bg-stone-200 transition-colors"
+							>send message</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</Wrapper>
+	<div
+		class="absolute top-0 left-1/2 -translate-x-1/2 w-7/12 h-0 border-b-[28px] border-b-stone-200 border-l-[40px] border-l-transparent border-r-[40px] border-r-transparent rotate-180"
+	>
+	</div>
+	<div
+		class="absolute bottom-0 left-1/2 -translate-x-1/2 w-7/12 h-0 border-b-[28px] border-b-gray-300 border-l-[40px] border-l-transparent border-r-[40px] border-r-transparent"
+	>
+	</div>
 </section>
 <script src="../scripts/handleContactForm.ts"></script>
 <style>
-  @keyframes movePopupBar {
-    to {
-      transform: translateX(100%);
-    }
-  }
-  .form-submit-bar {
-    animation: movePopupBar 3s linear;
-  }
+	@keyframes movePopupBar {
+		to {
+			transform: translateX(100%);
+		}
+	}
+	.form-submit-bar {
+		animation: movePopupBar 3s linear;
+	}
 </style>
