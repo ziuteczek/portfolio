@@ -1,5 +1,5 @@
 
-# 🌐 [Portfolio website](https://github.com/ziuteczek/portfolio)
+# 💼 [Portfolio website](https://github.com/ziuteczek/portfolio)
 
 A modern, fast, and SEO-friendly portfolio website built to showcase my projects, experience, and interests.  
 The site is generated using a **Static Site Generator (SSG)**, providing excellent performance and discoverability.
