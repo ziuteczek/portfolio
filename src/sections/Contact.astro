@@ -4,6 +4,7 @@ import Wrapper from "../components/Wrapper.astro";
 import githubIcon from "../assets/icons/github-white.svg";
 import discordIcon from "../assets/icons/discord.svg";
 import linkedInIcon from "../assets/icons/linked-in white.svg";
+import emailIcon from "../assets/icons/email white.svg"
 import { Image } from "astro:assets";
 ---
 
@@ -34,7 +35,7 @@ import { Image } from "astro:assets";
 							src={githubIcon}
 							alt="github icon"
 							class="inline h-10 w-10"
-						/> Github</a
+						/> ziuteczek</a
 					>
 
 					<a
@@ -45,7 +46,7 @@ import { Image } from "astro:assets";
 							src={discordIcon}
 							alt="discord icon"
 							class="inline h-10 w-10"
-						/> Discord</a
+						/> ziuteczek</a
 					>
 					<a
 						href="https://www.linkedin.com/in/stanis%C5%82aw-dymny-450009282/"
@@ -55,8 +56,19 @@ import { Image } from "astro:assets";
 							src={linkedInIcon}
 							alt="discord linked in"
 							class="inline h-10 w-10"
-						/> Linkedin</a
+						/> Stanisław Dymny</a
 					>
+					<a
+						href="mailto:dymnystan@gmail.com"
+						class="relative not-italic text-nowrap before:absolute before:-left-2 before:transition-opacity before:duration-300 before:w-1 before:bg-white before:top-0 before:bottom-0 before:opacity-0 hover:before:opacity-100 transition-all animate-scroll duration-500 translate-x-10 -on-scroll:translate-x-10 blur-md -on-scroll:blur-md opacity-0 -on-scroll:opacity-0 delay-600 text-xl"
+					>
+						<Image
+							src={emailIcon}
+							alt="discord linked in"
+							class="inline h-10 w-10"
+						/> dymnystan@gmail.com</a
+					>
+					
 				</div>
 			</address>
 			<form method="POST" class="contact-form flex flex-col flex-1/2">
