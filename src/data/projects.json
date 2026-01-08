@@ -17,7 +17,7 @@
 		"title": "Portfolio page",
 		"description": "A modern, fast, and SEO-friendly portfolio website built to showcase my projects, experience, and interests. The site is generated using a Static Site Generator (SSG), providing excellent performance and discoverability.",
 		"imgSrc": "/src/assets/portfolio-page-screenshot.png",
-		"repository": "https://github.com/ziuteczek/Guessio-client",
+		"repository": "https://github.com/ziuteczek/portfolio",
 		"technologies": ["Astro", "Tailwind css", "CMS"]
 	}
 ]
