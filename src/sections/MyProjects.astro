@@ -7,7 +7,7 @@ import Wrapper from "../components/Wrapper.astro";
 <section id="my-projects" class="bg-stone-200 pb-7">
   <Wrapper size="large" class="size-full">
     <h2 class="text-7xl text-center">My projects</h2>
-    <div class="flex gap-5 justify-center mt-7 flex-wrap h-full">
+    <div class="flex gap-5 justify-center mt-7 flex-wrap">
       {projectsData.map((project, i) => <ProjectCard {...project} index={i} />)}
     </div>
   </Wrapper>
