@@ -1,8 +1,8 @@
 [
 	{
 		"title": "Prawko teoria",
-		"description": "A web app to help prepare for the driving license theory exam.",
-		"imgSrc": "/src/assets/car-drivin-car.png",
+		"description": "A web app to help prepare for the driving license theory exam. \n A web app that helps you prepare for the driving license theory exam. It includes practice quizzes, lessons, and soon AI assistance and mock tests.",
+		"imgSrc": "/src/assets/prawko-teoria-cat.png",
 		"repository": "https://github.com/ziuteczek/prawko-teoria",
 		"technologies": ["React", "Typescript", "Supabase"]
 	},
@@ -10,14 +10,14 @@
 		"title": "Jinx IT!",
 		"description": "Fast-paced pixel-art dodge game inspired by Arcane (Netflix). \n Jinx IT is a retro-style action game where you dodge waves of incoming missiles and try to survive as long as possible. Built in C using SDL3, it blends chaotic fun, pixel-perfect visuals, and explosive gameplay.",
 		"imgSrc": "/src/assets/jinx-it.png",
-		"repository": "https://github.com/ziuteczek/jinx-t",
+		"repository": "https://github.com/ziuteczek/jinx-it",
 		"technologies": ["C", "SDL 3"]
 	},
 	{
-		"title": "Tetris",
-		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo deleniti, veniam id, rerum neque ab, eius sunt commodi vero animi illo dolorem consequuntur! Veritatis, eveniet tempora. Explicabo asperiores laboriosam impedit.",
-		"imgSrc": "/src/assets/tetris.jpg",
+		"title": "Portfolio page",
+		"description": "A modern, fast, and SEO-friendly portfolio website built to showcase my projects, experience, and interests. The site is generated using a Static Site Generator (SSG), providing excellent performance and discoverability.",
+		"imgSrc": "/src/assets/portfolio-page-screenshot.png",
 		"repository": "https://github.com/ziuteczek/Guessio-client",
-		"technologies": ["SDL2", "C++"]
+		"technologies": ["Astro", "Tailwind css", "CMS"]
 	}
 ]
