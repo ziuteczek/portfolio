@@ -4,7 +4,7 @@ import Wrapper from "../components/Wrapper.astro";
 import githubIcon from "../assets/icons/github-white.svg";
 import discordIcon from "../assets/icons/discord.svg";
 import linkedInIcon from "../assets/icons/linked-in white.svg";
-import emailIcon from "../assets/icons/email white.svg"
+import emailIcon from "../assets/icons/email white.svg";
 import { Image } from "astro:assets";
 ---
 
@@ -28,33 +28,39 @@ import { Image } from "astro:assets";
 					class="flex flex-row gap-3 sm:text-3xl lg:flex-col mt-5 flex-wrap justify-center"
 				>
 					<a
-						href="https:www.github.com/ziuteczek"
+						href="https://github.com/ziuteczek"
+						target="_blank"
+						rel="noopener noreferrer"
 						class="relative not-italic text-nowrap before:absolute before:-left-2 before:transition-opacity before:duration-300 before:w-1 before:bg-white before:top-0 before:bottom-0 before:opacity-0 hover:before:opacity-100 transition-all animate-scroll duration-500 translate-x-10 -on-scroll:translate-x-10 blur-md -on-scroll:blur-md opacity-0 -on-scroll:opacity-0 text-xl"
 					>
 						<Image
 							src={githubIcon}
-							alt="github icon"
+							alt=""
 							class="inline h-10 w-10"
 						/> ziuteczek</a
 					>
 
 					<a
 						href="https://discordapp.com/users/442365920263012353"
+						target="_blank"
+						rel="noopener noreferrer"
 						class="relative not-italic text-nowrap before:absolute before:-left-2 before:transition-opacity before:duration-300 before:w-1 before:bg-white before:top-0 before:bottom-0 before:opacity-0 hover:before:opacity-100 transition-all animate-scroll duration-500 translate-x-10 -on-scroll:translate-x-10 blur-md -on-scroll:blur-md opacity-0 -on-scroll:opacity-0 delay-300 text-xl"
 					>
 						<Image
 							src={discordIcon}
-							alt="discord icon"
+							alt=""
 							class="inline h-10 w-10"
 						/> ziuteczek</a
 					>
 					<a
 						href="https://www.linkedin.com/in/stanis%C5%82aw-dymny-450009282/"
+						target="_blank"
+						rel="noopener noreferrer"
 						class="relative not-italic text-nowrap before:absolute before:-left-2 before:transition-opacity before:duration-300 before:w-1 before:bg-white before:top-0 before:bottom-0 before:opacity-0 hover:before:opacity-100 transition-all animate-scroll duration-500 translate-x-10 -on-scroll:translate-x-10 blur-md -on-scroll:blur-md opacity-0 -on-scroll:opacity-0 delay-600 text-xl"
 					>
 						<Image
 							src={linkedInIcon}
-							alt="discord linked in"
+							alt=""
 							class="inline h-10 w-10"
 						/> Stanisław Dymny</a
 					>
@@ -64,7 +70,7 @@ import { Image } from "astro:assets";
 					>
 						<Image
 							src={emailIcon}
-							alt="discord linked in"
+							alt=""
 							class="inline h-10 w-10"
 						/> dymnystan@gmail.com</a
 					>
@@ -72,6 +78,12 @@ import { Image } from "astro:assets";
 				</div>
 			</address>
 			<form method="POST" class="contact-form flex flex-col flex-1/2">
+				<noscript>
+					<p class="mb-5 text-violet-200">
+						The contact form needs JavaScript. You can email me directly
+						at dymnystan@gmail.com.
+					</p>
+				</noscript>
 				<label
 					for="form-name"
 					class="animate-scroll blur-xl opacity-1 -translate-y-10 -on-scroll:blur-xl -on-scroll:opacity-1 -on-scroll:-translate-y-10 transition-all duration-500"
@@ -118,8 +130,8 @@ import { Image } from "astro:assets";
 					<div class="animate-scroll blur-xl opacity-1 -translate-y-10 -on-scroll:blur-xl -on-scroll:opacity-1 -on-scroll:-translate-y-10 transition-all duration-500 delay-1200 ">
 						<button
 							type="submit"
-							class="relative w-full bg-white overflow-hidden text-violet-950 text-xl pt-3 pb-3 rounded-md cursor-pointer font-black after:top-0 after:right-0 after:bottom-0 after:left-0  after:absolute after:-translate-y-full hover:after:-translate-0 after:transition-all after:-z-20 z-0 border-white border-3 hover:bg-stone-200 transition-colors"
-							>send message</button>
+							class="relative w-full bg-white overflow-hidden text-violet-950 text-xl pt-3 pb-3 rounded-md cursor-pointer font-black after:top-0 after:right-0 after:bottom-0 after:left-0  after:absolute after:-translate-y-full hover:after:-translate-0 after:transition-all after:-z-20 z-0 border-white border-3 hover:bg-stone-200 transition-colors disabled:cursor-progress disabled:opacity-70"
+							>Send message</button>
 					</div>
 				</div>
 			</form>
@@ -135,13 +147,3 @@ import { Image } from "astro:assets";
 	</div>
 </section>
 <script src="../scripts/handleContactForm.ts"></script>
-<style>
-	@keyframes movePopupBar {
-		to {
-			transform: translateX(100%);
-		}
-	}
-	.form-submit-bar {
-		animation: movePopupBar 3s linear;
-	}
-</style>

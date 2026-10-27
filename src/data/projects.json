@@ -1,7 +1,7 @@
 [
 	{
 		"title": "Prawko teoria",
-		"description": "A web app to help prepare for the driving license theory exam. \n A web app that helps you prepare for the driving license theory exam. It includes practice quizzes, lessons, and soon AI assistance and mock tests.",
+		"description": "A web app that helps you prepare for the driving license theory exam. \n It includes practice quizzes, lessons, and soon AI assistance and mock tests.",
 		"imgSrc": "/src/assets/prawko-teoria-cat.png",
 		"repository": "https://github.com/ziuteczek/prawko-teoria",
 		"technologies": ["React", "Typescript", "Supabase"]

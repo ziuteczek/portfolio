@@ -1,6 +1,5 @@
 const toTrackEls: NodeListOf<Element> = document.querySelectorAll(".animate-scroll");
-const aboutMeSectionEl: Element | null = document.querySelector("#about-me");
-const headerEl: Element | null = document.querySelector("header");
+const prefersReducedMotion: boolean = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 const addClassOnScroll: string = "on-scroll:";
 const removeClassOnScroll: string = "-on-scroll:"
@@ -40,7 +39,12 @@ const observer: IntersectionObserver = new IntersectionObserver((entries) => {
       classesToRemove?.forEach((className) => {
         entry.target.classList.remove(className);
       })
-    } 
+
+      observer.unobserve(entry.target);
+    }
   });
 });
-toTrackEls.forEach((el) => observer.observe(el));
+// With reduced motion the CSS already shows everything, so skip the reveal animations
+if (!prefersReducedMotion) {
+  toTrackEls.forEach((el) => observer.observe(el));
+}

@@ -9,31 +9,37 @@ import linkedinIcon from "../assets/icons/linkedin.svg";
 <div
   class={`flex justify-evenly mt-5 lg:mt-10 transition-all duration-700 ${Astro.props.class || ""}`}
 >
-  <a href="https://github.com/ziuteczek" target="_blank" title="github">
+  <a
+    href="https://github.com/ziuteczek"
+    target="_blank"
+    rel="noopener noreferrer"
+    title="GitHub"
+  >
     <Image
       src={githubIcon}
       class="h-full object-contain size-20 hover:scale-105 transition-transform duration-150 hover:filter-[var(--filter-violet-950)]"
-      alt="github icon"
+      alt="GitHub"
       loading="eager"
     />
   </a>
-  <a href="mailto:dymnystan@gmail.com" target="_blank" title="email">
+  <a href="mailto:dymnystan@gmail.com" title="Email">
     <Image
       src={emailIcon}
       class="h-full object-contain size-20 hover:scale-105 transition-transform duration-150 hover:filter-[var(--filter-violet-950)]"
-      alt="mail icon"
+      alt="Email"
       loading="eager"
     />
   </a>
   <a
     href="https://www.linkedin.com/in/stanis%C5%82aw-dymny-450009282/"
     target="_blank"
-    title="linked in"
+    rel="noopener noreferrer"
+    title="LinkedIn"
   >
     <Image
       src={linkedinIcon}
       class="h-full object-contain size-20 hover:scale-105 transition-transform duration-150 hover:filter-[var(--filter-violet-950)]"
-      alt="linkedIn icon"
+      alt="LinkedIn"
       loading="eager"
     />
   </a>

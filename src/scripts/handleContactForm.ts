@@ -7,12 +7,21 @@ emailjs.init({
 
 const formEl: HTMLFormElement | null = document.querySelector(".contact-form");
 
+const submitBtn: HTMLButtonElement | null | undefined = formEl?.querySelector("button[type=submit]");
+
 formEl?.addEventListener("submit", async (e) => {
-  document.body.style.cursor = "progress";
   e.preventDefault();
+  if (submitBtn?.disabled) return;
+
+  document.body.style.cursor = "progress";
+  const submitBtnText = submitBtn?.textContent ?? "";
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending…";
+  }
   const popup = document.createElement("div");
   try {
-    const response = await emailjs.sendForm(
+    await emailjs.sendForm(
       "service_gm282sp",
       "template_38t99p9",
       formEl
@@ -21,10 +30,15 @@ formEl?.addEventListener("submit", async (e) => {
 
     popup.insertAdjacentHTML("afterbegin", formSubmitPopupSucces);
   } catch (err) {
-    console.log(err);
+    console.error(err);
     popup.insertAdjacentHTML("afterbegin", formSubmitPopupFail);
+  } finally {
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = submitBtnText;
+    }
+    document.body.style.cursor = "auto";
   }
-  document.body.style.cursor = "auto";
   document.body.append(popup);
   setTimeout(() => {
     popup.remove();

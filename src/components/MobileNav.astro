@@ -5,16 +5,24 @@ import "../styles/burger.css";
 import NavLinks from "../components/NavLinks.astro";
 ---
 
-<button class="fixed left-5 top-0 z-90 lg:hidden" aria-label="open nav">
+<button
+  class="mobile-nav-toggle fixed left-5 top-0 z-90 lg:hidden"
+  aria-label="Open navigation"
+  aria-expanded="false"
+  aria-controls="mobile-nav"
+>
   <div id="nav-icon1">
     <span class="bg-violet-600"></span>
     <span class="bg-violet-600"></span>
     <span class="bg-violet-600"></span>
   </div>
 </button>
-<nav class="mobile-nav lg:hidden fixed -translate-x-full w-svw h-svh z-80 bg-white flex items-center justify-center text-center transition-transform duration-200">
+<nav
+  id="mobile-nav"
+  inert
+  class="mobile-nav lg:hidden fixed -translate-x-full w-svw h-svh z-80 bg-white flex items-center justify-center text-center transition-transform duration-200">
   <ul class="flex flex-col text-5xl gap-7">
     <NavLinks/>
   </ul>
 </nav>
-<script src="../scripts/mobileNav"></script>
+<script src="../scripts/mobileNav.ts"></script>

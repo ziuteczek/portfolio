@@ -22,3 +22,26 @@
   font-style: normal;
   font-display: swap;
 }
+
+/* Show scroll-animated content when JS is off or the visitor prefers reduced motion */
+html:not(.js) .animate-scroll {
+  opacity: 1;
+  filter: none;
+  translate: none;
+  scale: none;
+  rotate: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-scroll {
+    opacity: 1;
+    filter: none;
+    translate: none;
+    scale: none;
+    rotate: none;
+    transition: none;
+  }
+}

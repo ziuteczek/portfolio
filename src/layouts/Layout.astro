@@ -1,48 +1,69 @@
 ---
 import stasAge from "../scripts/calcStasAge";
 import "../styles/formSubmitPopup.css";
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, "/");
+const siteUrl = new URL(base, Astro.site).href;
+const title = "Stanisław Dymny – Web Developer Portfolio";
+const description = `Stanisław Dymny, a ${stasAge}-year-old programming enthusiast, is seeking an internship. Skilled in web development and more, he’s eager to learn, grow, and contribute to innovative projects!`;
+const ogImage = new URL("cat-selfie.png", siteUrl).href;
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Stanisław Dymny",
+  url: siteUrl,
+  email: "mailto:dymnystan@gmail.com",
+  jobTitle: "Web developer",
+  sameAs: [
+    "https://github.com/ziuteczek",
+    "https://www.linkedin.com/in/stanis%C5%82aw-dymny-450009282/",
+  ],
+};
 ---
 
 <!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="shortcut icon" href="/portfolio/favicon.ico" type="image/x-icon" />
+    <meta name="theme-color" content="#2e1065" />
+    <script is:inline>
+      document.documentElement.classList.add("js");
+    </script>
+    <link
+      rel="icon"
+      href={`${base}favicon.ico`}
+      type="image/x-icon"
+    />
+    <link rel="canonical" href={siteUrl} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
     <!-- OG Meta Tags  -->
-    <meta property="og:title" content="Stanisław Dymny portfolio" />
-    <meta
-      property="og:description"
-      content={`Stanisław Dymny, an ${stasAge}-year-old programming enthusiast, is seeking an internship. Skilled in web development and more, he’s eager to learn, grow, and contribute to innovative projects!`}
-    />
-    <meta
-      property="og:image"
-      content="https://ziuteczek.github.io/portfolio/cat-selfie.png"
-    />
-    <meta property="og:url" content="https://ziuteczek.github.io/portfolio/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content={siteUrl} />
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Stanisław Dymny portfolio" />
-    <meta
-      name="twitter:description"
-      content={`Stanisław Dymny, an ${stasAge}-year-old programming enthusiast, is seeking an internship. Skilled in web development and more, he’s eager to learn, grow, and contribute to innovative projects!`}
-    />
-    <meta
-      name="twitter:image"
-      content="https://ziuteczek.github.io/portfolio/cat-selfie.png"
-    />
-    <meta name="twitter:url" content="https://ziuteczek.github.io/portfolio/" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:url" content={siteUrl} />
 
-    <title>Stanisław Dymny</title>
-    <meta
-      name="description"
-      content={`Stanisław Dymny, an ${stasAge}-year-old programming enthusiast, is seeking an internship. Skilled in web development and more, he’s eager to learn, grow, and contribute to innovative projects!`}
+    <script
+      type="application/ld+json"
+      is:inline
+      set:html={JSON.stringify(personSchema)}
     />
   </head>
   <body class="font-[Inter,sans-serif] scroll-smooth overflow-x-hidden">
-    <noscript>Please turn on javscript!</noscript>
     <slot />
   </body>
 </html>
